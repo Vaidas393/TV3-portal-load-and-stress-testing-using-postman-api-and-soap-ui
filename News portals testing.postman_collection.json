@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "632973a5-b349-40a3-980a-498b40051673",
+		"name": "News portals testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "15min test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"energijos per metus, pasirinkti nepriklausomą tiekėją turi iki gruodžio vidurio\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.5"
+					},
+					{
+						"key": "Origin",
+						"value": "https://www.15min.lt"
+					},
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Referer",
+						"value": "https://www.15min.lt/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "TE",
+						"value": "trailers"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "https://www.15min.lt/verslas/naujiena/energetika/seime-skinasi-kelia-istatymai-del-palankesniu-sildymo-ir-elektros-kainu-664-1583800",
+					"protocol": "https",
+					"host": [
+						"www",
+						"15min",
+						"lt"
+					],
+					"path": [
+						"verslas",
+						"naujiena",
+						"energetika",
+						"seime-skinasi-kelia-istatymai-del-palankesniu-sildymo-ir-elektros-kainu-664-1583800"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lrytas test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"elektroninę registracijos formą adresu\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.lrytas.lt/lietuvosdiena/aktualijos/2021/10/19/news/kontakta-su-serganciu-covid-19-turejes-pareigunas-savo-atsakymo-turejo-laukti-darbe-i-nuotolini-nebeleido-21082460",
+					"protocol": "https",
+					"host": [
+						"www",
+						"lrytas",
+						"lt"
+					],
+					"path": [
+						"lietuvosdiena",
+						"aktualijos",
+						"2021",
+						"10",
+						"19",
+						"news",
+						"kontakta-su-serganciu-covid-19-turejes-pareigunas-savo-atsakymo-turejo-laukti-darbe-i-nuotolini-nebeleido-21082460"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TV3",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Vis dėlto jų efektyvus mokesčių tarifas buvo mažiausias ir sudarė 16,8 proc.\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://www.tv3.lt/naujiena/verslas/lietuvos-milijonieriai-vidutiniskai-virs-10-tukst-euru-per-viena-diena-tiek-uzdirbo-128-lietuviai-n1120048",
+					"protocol": "https",
+					"host": [
+						"www",
+						"tv3",
+						"lt"
+					],
+					"path": [
+						"naujiena",
+						"verslas",
+						"lietuvos-milijonieriai-vidutiniskai-virs-10-tukst-euru-per-viena-diena-tiek-uzdirbo-128-lietuviai-n1120048"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
